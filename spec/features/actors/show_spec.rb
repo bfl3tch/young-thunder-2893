@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'The Movie Show Page' do
+RSpec.describe 'The Actor Show Page' do
   before(:each) do
     @studio_1 = Studio.create!(name: 'Universal Studios', location: 'Orlando')
     @movie_1 = @studio_1.movies.create!(title: 'Blow', creation_year: 2003, genre: 'Drama')

@@ -10,4 +10,8 @@ class Movie < ApplicationRecord
   def average_actor_age
     actors.average(:age)
   end
+
+  def movie_actors
+    actors
+  end
 end
