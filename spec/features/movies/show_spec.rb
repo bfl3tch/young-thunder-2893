@@ -43,4 +43,12 @@ RSpec.describe 'The Movie Show Page' do
   it 'displays a form to add an actor to this movie' do
     expect(page).to have_content("Add an Actor to #{@movie_1.title}")
   end
+
+  it 'has a form that actually adds the actor to the movie' do
+    fill_in :actor_name, with: @actor_4.name
+    click_button "Submit"
+
+    expect(current_path).to eq("/movies/#{@movie_1.id}")
+    expect(page).to have_content(@actor_4.name)
+  end
 end
