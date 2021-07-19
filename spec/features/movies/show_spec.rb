@@ -39,4 +39,8 @@ RSpec.describe 'The Movie Show Page' do
     expect(page).to_not have_content(@actor_4.name)
     expect(page).to_not have_content(@actor_5.name)
   end
+
+  it 'displays a form to add an actor to this movie' do
+    expect(page).to have_content("Add an Actor to #{@movie_1.title}")
+  end
 end
