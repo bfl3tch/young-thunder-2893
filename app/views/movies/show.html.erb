@@ -10,7 +10,7 @@
 
 
 <h3><%="Add an Actor to #{@movie.title}"%></h3>
-<%= form_with url: "/movies/#{@movie.id}/films", local: true do |f| %>
+<%= form_with url: "/movies/#{@movie.id}/films/", local: true do |f| %>
   <%= f.label :actor_name %>
   <%= f.text_field :actor_name %>
   <%= f.submit 'Submit' %>
