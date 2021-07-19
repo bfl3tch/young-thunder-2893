@@ -19,9 +19,9 @@ RSpec.describe 'The Studio Index Page' do
     movie_2 = studio_1.movies.create!(title: 'Jurassic Park', creation_year: 1995, genre: 'Drama')
     movie_3 = studio_2.movies.create!(title: 'Harry Potter 1', creation_year: 2001, genre: 'Drama')
     visit '/studios'
-
+    save_and_open_page
     expect(page).to have_content(movie_1.title)
     expect(page).to have_content(movie_2.title)
-    expect(page).to have_content(movie_3.title)    
+    expect(page).to have_content(movie_3.title)
   end
 end
